@@ -477,11 +477,11 @@ section#insurances h2 {
     .flex-header > div:last-child {
         display: none;
     }
-    
+
     .flex-header > div:first-child {
         width: 100%;
     }
-    
+
     section#promises {
         flex-direction: column;
     }
@@ -489,7 +489,7 @@ section#insurances h2 {
     footer nav ul {
         gap: 30px;
     }
-    
+
     .insurances-list {
         flex-direction: column;
         align-items: center;
@@ -527,7 +527,7 @@ section#insurances h2 {
     .flex-header > div:first-child {
         min-width: 0;
     }
-    
+
     section#add {
         border-radius: 0;
         background: transparent;
@@ -535,15 +535,15 @@ section#insurances h2 {
         padding: 25px;
         padding-top: 0;
     }
-    
+
     .advantages {
         grid-template-columns: 1fr;
     }
-    
+
     a.btn-nav {
         display: none;
     }
-    
+
     section#car {
         padding: 50px 20px;
     }
