@@ -10,7 +10,7 @@
             {% for car in cars %}
             <article>
                 <div class="mini-car-title">
-                    <a href="car.html">
+                    <a href="{{ path('app_car_details', {id: car.id}) }}">
                         <h3>{{ car.model }}</h3>
                         <p>ou similaire | Saint-Étienne</p>
                     </a>
