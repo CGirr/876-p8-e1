@@ -15,7 +15,12 @@
                         <p>ou similaire | Saint-Étienne</p>
                     </a>
                     <div>
-                        <a href="#"><img src="assets/icons/trash.png" alt="Supprimer" /></a>
+                        <a
+                            href="{{ path('app_car_remove', {id: car.id}) }}"
+                            onclick="return confirm('Voulez-vous vraiment supprimer cette voiture ?');"
+                        >
+                            <img src="assets/icons/trash.png" alt="Supprimer" />
+                        </a>
                     </div>
                 </div>
                 <div class="mini-car-icons">

@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Repository\CarRepository;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -32,5 +33,20 @@ final class CarController extends AbstractController
         return $this->render('car/details.html.twig', [
             'car' => $car,
         ]);
+    }
+
+    #[Route('/remove/{id}', name: 'app_car_remove', methods: ['GET'])]
+    public function remove(int $id, CarRepository $carRepository, EntityManagerInterface $entityManager): Response
+    {
+        $car = $carRepository->find($id);
+
+        if (!$car) {
+            return $this->redirectToRoute('app_index');
+        }
+
+        $entityManager->remove($car);
+        $entityManager->flush();
+
+        return $this->redirectToRoute('app_index');
     }
 }
