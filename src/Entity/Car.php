@@ -14,21 +14,27 @@ class Car
     #[ORM\Column]
     private ?int $id = null;
 
+    #[Assert\NotBlank]
     #[ORM\Column(length: 255)]
     private ?string $model = null;
 
+    #[Assert\NotBlank]
     #[ORM\Column(type: Types::TEXT)]
     private ?string $description = null;
 
+    #[Assert\NotBlank]
     #[ORM\Column]
     private ?float $monthly_price = null;
 
+    #[Assert\NotBlank]
     #[ORM\Column]
     private ?float $daily_price = null;
 
+    #[Assert\NotBlank]
     #[ORM\Column]
     private ?int $places = null;
 
+    #[Assert\NotBlank]
     #[ORM\Column]
     private ?bool $manual = null;
 
